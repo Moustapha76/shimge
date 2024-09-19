@@ -14,8 +14,14 @@ import Article from "./pages/ArticleItem";
 import { Switch } from 'antd';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import { GlobalContext } from "./componants/partials/GlobalContext";
+import Properties from "./componants/Properties";
 
 export default function App() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   const myApp = useRef(null);
   const { lightMode, setLightMode } = useContext(GlobalContext);
   const changeTheme = (checked) => {
@@ -51,10 +57,24 @@ export default function App() {
                   <NavLink to="/proprietes">Pompe SHIMGE</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/actualites">Plomberie</NavLink>
+                  <NavLink to="/actualites">Actualités</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/contact">Sanitaire</NavLink>
+                  <NavLink to="/contact">Contact</NavLink>
+                </li>
+                <li className="dropdown"> 
+                    <NavLink to="/nos-produits">
+                    <a className="dropbtn" onClick={toggleDropdown}>
+                      Services
+                    </a>
+                    {dropdownOpen && (
+                      <ul className="dropdown-content">
+                        <li><NavLink to="/nos-produits/plomberie">Plomberie</NavLink></li>
+                        <li><NavLink to="/nos-produits/sanitaire">Sanitaire</NavLink></li>
+                        <li><NavLink to="/nos-produits/pvc">PVC</NavLink></li>
+                      </ul>
+                    )}
+                    </NavLink>
                 </li>
                 <li>
                   <NavLink to="/resultat">Contact</NavLink>
@@ -77,6 +97,7 @@ export default function App() {
           <Route path="/resultat" element={<Resultat />} />
           <Route path="/proprietes/details/:id" element={<Property />} />
           <Route path="/proprietes/details/" element={<Property />} />
+          <Route path="/nos-produits/:label" element={<Properties />} />
         </Routes>
       </Router>
     </div>

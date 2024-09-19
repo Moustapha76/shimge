@@ -4,20 +4,12 @@ import { Carousel } from 'antd';
 import { CalendarOutlined } from '@ant-design/icons';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import HouseIcon from '@mui/icons-material/House';
-import SingleBedIcon from '@mui/icons-material/SingleBed';
-import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import ChairIcon from '@mui/icons-material/Chair';
 import AOS from 'aos';
 import { Image } from 'antd';
-// Import Swiper React components
-// import { Navigation, Pagination, Scrollbar, A11y, Controller } from 'swiper/modules';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
 
   export default function Main(){
-    // const [controlledSwiper, setControlledSwiper] = useState(null);
     const { products, cityproperties, partenaires } = useContext(GlobalContext);
     useEffect(() => {
         AOS.init({
@@ -41,64 +33,71 @@ import 'swiper/css';
                         preview={{
                         onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
                         }} >
-                        <Image src={`/${products[3].image}`} alt="" />
-                        <Image src={`/${products[4].image}`} alt="" />
+                        <Image src="../images/toilet-5.jpg" alt="" />
+                        <Image src="../images/toilet-1.jpg" alt="" />
                     </Image.PreviewGroup>
                     {/* <img src="../images/about-banner-1.jpg" alt="" />
                     <img src="../images/house-3.jpg" alt="" /> */}
                 </div>
             </section>
             <section className='advantages'>
-                <h2 className="title" data-aos="fade-up" >Que recherchez-vous ? <span className="subtitle">Nous offrons un service complet à chaque étape.</span></h2>
+                <h2 className="title" data-aos="fade-up" >Pourquoi nous choisir ? <span className="subtitle">Nous offrons un service complet à chaque étape.</span></h2>
                 <div className='container' data-aos="fade-up" >
                     <div className='item'>
                         <span className='icone'><LocationCityIcon/></span>
-                        <span>Villa moderne</span>
-                        <p>Découvrez les meilleurs villas sénégalais.</p>
+                        <span>Qualité</span>
+                        <p>Nos produits sont de bonnes qualités qui résistent à tout et sont durables.</p>
                     </div>
                     <div className='item'>
                         <span className='icone'><HouseIcon/></span>
-                        <span>Maison familiale</span>
-                        <p>Envie de déménager vers une nouvelle maison?</p>
+                        <span>Prix compétitifs</span>
+                        <p>Découvrez les meilleurs outils à des prix imbattables uniquement chez CCPS.</p>
                     </div>
                     <div className='item'>
                         <span className='icone'><HomeWorkIcon/></span>
-                        <span>Appartement de luxe</span>
-                        <p>Des appartements de luxe à bon prix.</p>
+                        <span>Professionalisme</span>
+                        <p>Nous travaillons avec des professionnels du métier depuis 2016.</p>
                     </div>
                     <div className='item'>
                         <span className='icone'><ChairIcon/></span>
-                        <span>Studio moderne</span>
-                        <p>Nos Studios sont de hautes qualités.</p>
+                        <span>Satisfaction client</span>
+                        <p>Nous sommes toujours là pour satisfaire nos clients les plus exigents.</p>
                     </div>
                 </div>
             </section>
             <section className='featured' data-aos="fade-up" >
-                <h2 className="title">Propriétés en vedette <span className="subtitle">Propriétés sélectionnées par notre équipe.</span></h2>
+                <h2 className="title">Nos produits <span className="subtitle">Les meilleurs produits chez CCPS</span></h2>
                 <div className='container'>
                     <Carousel dots={true} arrows={true} autoplay={true} infinite={true} slidesToShow={3} draggable={true} >
-                        {products.map((property, key)=>{
-                            return(
-                                <a href='/' className='card' id={key}>
-                                    <span className='statut'>{property.statut}</span>
-                                    <img src={property.image} alt={property.name} />
-                                    <div className='infos'>
-                                        <span className='prix'>{property.price} FcFA</span>
-                                        <span className='titre'>{property.name}</span>
-                                        <span className='location'>{property.location}</span>
-                                        <div className='caracteristiques'>
-                                            <span><strong><MeetingRoomIcon/></strong> Chambres : {property.room}</span>
-                                            <span><strong><SingleBedIcon/></strong> Lits : {property.bed}</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            );
-                        })}
+                        <a href='/' className='card' id="">
+                            <img src="../images/plomberie.jpg" alt="Plomberie" />
+                            <div className='infos'>
+                                <span className='titre'>Plomberie</span>
+                            </div>
+                        </a>
+                        <a href='/' className='card' id="">
+                            <img src="../images/shimge.jpg" alt="shimge" />
+                            <div className='infos'>
+                                <span className='titre'>Pompes Shimge</span>
+                            </div>
+                        </a>
+                        <a href='/' className='card' id="">
+                            <img src="../images/sanitaire.jpg" alt="Sanitaire" />
+                            <div className='infos'>
+                                <span className='titre'>Sanitaire</span>
+                            </div>
+                        </a>
+                        <a href='/' className='card' id="">
+                            <img src="../images/pvc.jpg" alt="PVC" />
+                            <div className='infos'>
+                                <span className='titre'>PVC</span>
+                            </div>
+                        </a>
                     </Carousel>
                 </div>
             </section>
-            <section className='propertypercity hidden'>
-                <h2 className='title'>Propriétés par villes<span className="subtitle">Trouvez des propriétés dans ces villes.</span></h2>
+            <section className='propertypercity'>
+                <h2 className='title'>Notre équipe<span className="subtitle">L'équipe derrière CCPS.</span></h2>
                 <div className='container'>
                     {cityproperties.map((city, key)=>{
                         return(
@@ -115,13 +114,15 @@ import 'swiper/css';
             </section>
             <section className='favoris' data-aos="fade-up" >
                 <div className='bloc-left'>
-                    <h2 className='title sans'>Appartement moderne à Dakar plateau<span className="subtitle">A louer</span></h2>
-                    <h3>5000 FcFa / nuit</h3>
-                    <p>Appartement moderne meublé et bien équipé de dernière génération. Profitez d'un luxe sur mesure à de bas prix.</p>
-                    <button className='btn'>Réservez maintenant</button>
+                    <h2 className='title sans'>CCPS - SHIMGE<span className="subtitle">Partenaire officiel SHIMGE</span></h2>
+                    <h3>Nous sommes en partenariat avec SHIMGE depuis 2016</h3>
+                    <p> Depuis sa création en 2016,Comptoir Commercial de Plomberie du Sénégal s’engage activement à promouvoir une gestion responsable de l’eau, une production de qualité et le respect de l’environnement.</p>
+                    <p>Pour atteindre ces objectifs, CCPS a établi un partenariat stratégique avec Shimge Pump Industry Group Co., leader chinois dans la fabrication de pompes et d’équipements de contrôle.Shimge, fort de trois décennies d’expertise dans la recherche, la fabrication et la vente de pompes de haute qualité, propose une gamme complète de produits, incluant des pompes submersibles, des pompes de surface, des pompes de puits et des pompes à moteur.</p>
+                    <p>Avec l’objectif de fournir les meilleures solutions de pompage et de traitement de l’eau à l’échelle mondiale et de contribuer à une meilleure qualité de vie pour tous, Shimge fait confiance à CCPS, son distributeur exclusif depuis 2016.</p>
+                    <button className='btn'>Devenir partenaire</button>
                 </div>
                 <div className='bloc-right'>
-                    <img src="../images/hero-banner.png" alt="" />
+                    <Image src="../images/shimge.jpg" alt="" ></Image>
                 </div>
             </section>
             <section className='news' data-aos="fade-up" >
@@ -129,7 +130,7 @@ import 'swiper/css';
             <div className='container'>
                 <div className='article'>
                     <div className='article-img'>
-                        <img src="../images/blog-1.jpg" alt="" />
+                        <img src="../images/Blog/blog-1.jpg" alt="" />
                     </div>
                     <div className='dscription'>
                         <h4 className='title'>Meilleure inspiration de design intérieure</h4>
@@ -141,7 +142,7 @@ import 'swiper/css';
                 </div>
                 <div className='article'>
                     <div className='article-img'>
-                        <img src="../images/blog-2.jpg" alt="" />
+                        <img src="../images/Blog/blog-2.jpg" alt="" />
                     </div>
                     <div className='dscription'>
                         <h4 className='title'>Top 5 des meilleures immobiliers du Sénégal</h4>
@@ -153,7 +154,7 @@ import 'swiper/css';
                 </div>
                 <div className='article'>
                     <div className='article-img'>
-                        <img src="../images/blog-3.jpg" alt="" />
+                        <img src="../images/Blog/blog-3.jpg" alt="" />
                     </div>
                     <div className='dscription'>
                         <h4 className='title'>Villa à vendre aux almadies</h4>
@@ -168,15 +169,11 @@ import 'swiper/css';
             <section className='partenaires' data-aos="fade-up" >
                 <h2 className='title'>Nos partenaires<span className="subtitle">Nous travaillons uniquement avec les meilleures entreprises.</span></h2>
                 <div className='container'>
-                {/* <Swiper onSwiper={setControlledSwiper} autoplay={{delay: 1000}} modules={[Pagination, Navigation, Scrollbar, A11y, Controller]} slidesPerView={5}  navigation pagination={{ clickable: true }} spaceBetween={40} controller={{ control: controlledSwiper }} className="mySwiper"> */}
                     {partenaires.map((partenaire, key)=>{
                         return(
-                        //    <SwiperSlide >
                             <a href={partenaire.link} id={key} className='logo-item'><img src={partenaire.image} alt={partenaire.name}/></a>
-                            // {/* </SwiperSlide> */}
                         );
                     })}
-                {/* </Swiper> */}
                 </div>
             </section>
         </main>
