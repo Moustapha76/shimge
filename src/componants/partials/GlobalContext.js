@@ -26,26 +26,15 @@ export const GlobalProvider = ({ children }) => {
     return windowSize;
   }
   const showroomslist = [
-    { id: 1, lieu: 'CCPS VDN', image: '../images/store-1.jpg', plan: <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d613050.3502656833!2d-17.439802!3d14.672483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec173db7629dfd7%3A0x85910afdd1bb38aa!2sCOMPTOIR%20COMMERCIAL%20PLOMBERIE%20DU%20SENEGAL%20SARL%20-%20CCPS%20SARL!5e1!3m2!1sfr!2sus!4v1727867360117!5m2!1sfr!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>, movie: <iframe width="764" height="434" src="https://www.youtube.com/embed/iwWTEAzLqOQ" title="Des tous nouveaux modèles d’armoire à lavabo sont disponibles à CCPS. Passer nous visiter nous somme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>, description: "En cours d'enrichissement", adresse: '10561 Voie de degagement N, Dakar, Sénégal', gerant: 'Ibrahima Kane',tel: '+221 77 517 98 29'},
-    { id: 2, lieu: 'CCPS Dakar', image: '../images/store-2.jpg', plan: <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d613050.3502656833!2d-17.439802!3d14.672483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec173db7629dfd7%3A0x85910afdd1bb38aa!2sCOMPTOIR%20COMMERCIAL%20PLOMBERIE%20DU%20SENEGAL%20SARL%20-%20CCPS%20SARL!5e1!3m2!1sfr!2sus!4v1727867528949!5m2!1sfr!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>, movie: <iframe width="764" height="434" src="https://www.youtube.com/embed/iwWTEAzLqOQ" title="Des tous nouveaux modèles d’armoire à lavabo sont disponibles à CCPS. Passer nous visiter nous somme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>, description: "En cours d'enrichissement", adresse: 'Dakar, Sénégal', gerant: 'Ibrahima Kane',tel: '+221 77 517 98 29'},
-    { id: 3, lieu: 'CCPS TOUBA', image: '../images/store-3.jpg', plan: <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d612642.2951568189!2d-15.917874!3d14.817437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xeea370068b2a355%3A0xf9caa17073863e6f!2sCCPS%20TOUBA!5e1!3m2!1sfr!2sus!4v1727867600148!5m2!1sfr!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>, movie: <iframe width="764" height="434" src="https://www.youtube.com/embed/iwWTEAzLqOQ" title="Des tous nouveaux modèles d’armoire à lavabo sont disponibles à CCPS. Passer nous visiter nous somme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>, description: "En cours d'enrichissement", adresse: 'R38J+XR, Mbacké, Sénégal', gerant: 'Ibrahima Kane', tel: '+221 77 082 31 18'},
+    { id: 1, lieu: 'CCPS VDN', image: '../images/store-1.jpg', plan: <iframe title="CCPS" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d613050.3502656833!2d-17.439802!3d14.672483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec173db7629dfd7%3A0x85910afdd1bb38aa!2sCOMPTOIR%20COMMERCIAL%20PLOMBERIE%20DU%20SENEGAL%20SARL%20-%20CCPS%20SARL!5e1!3m2!1sfr!2sus!4v1727867360117!5m2!1sfr!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>, movie: <iframe width="764" height="434" src="https://www.youtube.com/embed/iwWTEAzLqOQ" title="Des tous nouveaux modèles d’armoire à lavabo sont disponibles à CCPS. Passer nous visiter nous somme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>, description: "En cours d'enrichissement", adresse: '10561 Voie de degagement N, Dakar, Sénégal', gerant: 'Ibrahima Kane',tel: '+221 77 517 98 29'},
+    { id: 2, lieu: 'CCPS Dakar', image: '../images/store-2.jpg', plan: <iframe title="CCPS" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d613050.3502656833!2d-17.439802!3d14.672483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec173db7629dfd7%3A0x85910afdd1bb38aa!2sCOMPTOIR%20COMMERCIAL%20PLOMBERIE%20DU%20SENEGAL%20SARL%20-%20CCPS%20SARL!5e1!3m2!1sfr!2sus!4v1727867528949!5m2!1sfr!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>, movie: <iframe width="764" height="434" src="https://www.youtube.com/embed/iwWTEAzLqOQ" title="Des tous nouveaux modèles d’armoire à lavabo sont disponibles à CCPS. Passer nous visiter nous somme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>, description: "En cours d'enrichissement", adresse: 'Dakar, Sénégal', gerant: 'Ibrahima Kane',tel: '+221 77 517 98 29'},
+    { id: 3, lieu: 'CCPS TOUBA', image: '../images/store-3.jpg', plan: <iframe title="CCPS" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d612642.2951568189!2d-15.917874!3d14.817437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xeea370068b2a355%3A0xf9caa17073863e6f!2sCCPS%20TOUBA!5e1!3m2!1sfr!2sus!4v1727867600148!5m2!1sfr!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>, movie: <iframe width="764" height="434" src="https://www.youtube.com/embed/iwWTEAzLqOQ" title="Des tous nouveaux modèles d’armoire à lavabo sont disponibles à CCPS. Passer nous visiter nous somme" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>, description: "En cours d'enrichissement", adresse: 'R38J+XR, Mbacké, Sénégal', gerant: 'Ibrahima Kane', tel: '+221 77 082 31 18'},
   ],
-  cityproperties = [
-    { id: 1, name: "Dakar", properties: 1, image: "../images/villes/dakar.jpg"},
-    { id: 2, name: "Kaolack", properties: 4, image: "../images/villes/kaolack.webp"},
-    { id: 3, name: "Thiès", properties: 10, image: "../images/villes/thies.webp"},
-    { id: 4, name: "Kaffrine", properties: 21, image: "../images/villes/Kaffrine.webp"},
-    { id: 5, name: "Tambacounda", properties: 11, image: "../images/villes/tamba.webp"},
-    { id: 6, name: "Kédougou", properties: 19, image: "../images/villes/kedougou.jpg"},
-    { id: 7, name: "Ziguinchor", properties: 1, image: "../images/villes/casamance.webp"},
-    { id: 8, name: "Matam", properties: 0, image: "../images/villes/matam.jpg"},
-    { id: 9, name: "Saint-Louis", properties: 7, image: "../images/villes/ndar.webp"},
-    { id: 10, name: "Mbour", properties: 3, image: "../images/villes/mbour.webp"},
-    { id: 11, name: "Kolda", properties: 7, image: "../images/villes/kolda.webp"},
-    { id: 12, name: "Fatick", properties: 20, image: "../images/villes/fatick.jpg"},
-    { id: 13, name: "Louga", properties: 3, image: "../images/villes/louga.webp"},
-    { id: 14, name: "Sédhiou", properties: 2, image: "../images/villes/sedhiou.jpg"},
-    { id: 14, name: "Gorée", properties: 10, image: "../images/villes/goree.jpg"},
+  members = [
+    { id: 1, name: "Ibrahima Kane", profession: "PDG", image: "../images/team/1.jpg"},
+    { id: 2, name: "Mouhamed Kane", profession: "Commercial", image: "../images/team/1.jpg"},
+    { id: 3, name: "Rokhaya Diouf", profession: "Sécrétaire", image: "../images/team/1.jpg"},
+    { id: 4, name: "Astou Fall", profession: "Comptable", image: "../images/team/1.jpg"},
   ],
   
   partenaires = [
@@ -147,7 +136,7 @@ export const GlobalProvider = ({ children }) => {
     topNews = (tab.filter(news=>news.rate === 'top'))
     function formatNumber(number){return number.toLocaleString('fr-FR')}
     return(
-    <GlobalContext.Provider value={{showroomslist, cityproperties, partenaires, formatNumber, newsData, topNews, setLightMode, lightMode, useWindowSize}}>
+    <GlobalContext.Provider value={{showroomslist, members, partenaires, formatNumber, newsData, topNews, setLightMode, lightMode, useWindowSize}}>
       {children}
     </GlobalContext.Provider>
   );

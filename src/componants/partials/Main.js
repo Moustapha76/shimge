@@ -10,7 +10,7 @@ import AOS from 'aos';
 import { Image } from 'antd';
 
   export default function Main(){
-    const { cityproperties, partenaires } = useContext(GlobalContext);
+    const { members, partenaires } = useContext(GlobalContext);
     useEffect(() => {
         AOS.init({
           duration: 1000, // Durée de l'animation en millisecondes
@@ -97,13 +97,14 @@ import { Image } from 'antd';
             <section className='propertypercity'>
                 <h2 className='title'>Notre équipe<span className="subtitle">L'équipe derrière CCPS.</span></h2>
                 <div className='container'>
-                    {cityproperties.map((city, key)=>{
+                    {members.map((member, key)=>{
                         return(
-                            <a href='/' className='city-card'>
-                                <div className='city-card-img'><img src={city.image} alt={city.name} /></div>
+                            <a href='/' className='city-card' key={key}>
+                                <div className='city-card-img'><img src={member.image} alt={member.name} /></div>
                                 <div className='city-card-info'>
-                                    <span>{city.name}</span>
-                                    <span><strong>{city.properties}</strong> Propriétés</span>
+                                    <span><strong>{member.name}</strong></span>
+                                    <span>{member.profession}</span>
+                                    <div className='rs'></div>
                                 </div>
                             </a>
                         )
