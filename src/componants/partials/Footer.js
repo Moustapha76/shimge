@@ -5,10 +5,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { useContext } from 'react';
-import { GlobalContext } from './GlobalContext';
 export default function Footer(){
-    const { lightMode } = useContext(GlobalContext);
     return(
         <footer>
             <section className="newsletter">
@@ -43,8 +40,9 @@ export default function Footer(){
                     <h6>Plan d'accès</h6>
                     <ul>
                         <li><a href="/">Accueil</a></li>
-                        {/* <li><a href="/">Qui sommes-nous ?</a></li> */}
-                        <li><a href="/">Propriétés</a></li>
+                        <li><a href="/">L'entreprise</a></li>
+                        <li><a href="/">Nos services</a></li>
+                        <li><a href="/">Pompes SHIMGE</a></li>
                         <li><a href="/">Actualités</a></li>
                         <li><a href="/">Contact</a></li>
                     </ul>
@@ -52,11 +50,10 @@ export default function Footer(){
                 <div className="bloc">
                     <h6>Services</h6>
                     <ul>
-                        <li><a href="/">Vente immobilier</a></li>
-                        <li><a href="/">Location immobilier</a></li>
-                        <li><a href="/">Achat immobilier</a></li>
-                        <li><a href="/">Mise en relation</a></li>
-                        <li><a href="/">Conseiller immobilier</a></li>
+                        <li><a href="/">Plomberie</a></li>
+                        <li><a href="/">Pompes SHIMGE</a></li>
+                        <li><a href="/">Sanitaire</a></li>
+                        <li><a href="/">PVC</a></li>
                     </ul>
                 </div>
                 <div className="bloc">
@@ -74,12 +71,12 @@ export default function Footer(){
             <hr/>
                 <div className='bloc'>
                     <img src={logo} alt="logo du site" />
-                    <span className='opaque'>Plateforme N°1 des courtiers du Sénégal.</span>
+                    <span className='opaque'>Comptoir Commercial de Plomberie du Sénégal.</span>
                 </div>
             </section>
             <section className='bottom'>
                 <span className='opaque'>@Copyright 2024 - Tous droits réservés</span>
-                <span className='opaque'>Plateforme nationale des courtiers</span>
+                <span className='opaque'>By DIGITASEN</span>
             </section>
         </footer>
     )

@@ -3,8 +3,8 @@ import logo from './logo.png';
 import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
 import Home from './pages/Home';
 import  About from './pages/About';
-import Proprieties from './pages/Properties';
-import Property from './pages/Property';
+import Showrooms from './pages/Showrooms';
+import Showroom from './pages/Showroom';
 import Actualites from './pages/Actualites';
 import Contact from './pages/Contact';
 import { useEffect, useState, useRef, useContext } from "react";
@@ -14,14 +14,8 @@ import Article from "./pages/ArticleItem";
 import { Switch } from 'antd';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import { GlobalContext } from "./componants/partials/GlobalContext";
-import Properties from "./componants/Properties";
 
 export default function App() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
   const myApp = useRef(null);
   const { lightMode, setLightMode } = useContext(GlobalContext);
   const changeTheme = (checked) => {
@@ -54,30 +48,19 @@ export default function App() {
                   <NavLink to="/qui-sommes-nous">L'entreprise</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/proprietes">Pompe SHIMGE</NavLink>
+                  <NavLink to="/showrooms">Showrooms</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/shimge">SHIMGE</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/services">Services</NavLink>
                 </li>
                 <li>
                   <NavLink to="/actualites">Actualités</NavLink>
                 </li>
                 <li>
                   <NavLink to="/contact">Contact</NavLink>
-                </li>
-                <li className="dropdown"> 
-                    <NavLink to="/nos-produits">
-                    <a className="dropbtn" onClick={toggleDropdown}>
-                      Services
-                    </a>
-                    {dropdownOpen && (
-                      <ul className="dropdown-content">
-                        <li><NavLink to="/nos-produits/plomberie">Plomberie</NavLink></li>
-                        <li><NavLink to="/nos-produits/sanitaire">Sanitaire</NavLink></li>
-                        <li><NavLink to="/nos-produits/pvc">PVC</NavLink></li>
-                      </ul>
-                    )}
-                    </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/resultat">Contact</NavLink>
                 </li>
               </ul>
             </nav>
@@ -90,14 +73,13 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/qui-sommes-nous" element={<About />} />
-          <Route path="/proprietes" element={<Proprieties />} />
+          <Route path="/showrooms" element={<Showrooms />} />
           <Route path="/actualites" element={<Actualites />} />
           <Route path="/actualites/:id" element={<Article />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resultat" element={<Resultat />} />
-          <Route path="/proprietes/details/:id" element={<Property />} />
-          <Route path="/proprietes/details/" element={<Property />} />
-          <Route path="/nos-produits/:label" element={<Properties />} />
+          <Route path="/showroom/:id" element={<Showroom />} />
+          <Route path="/nos-produits/:label" element={<Showrooms />} />
         </Routes>
       </Router>
     </div>

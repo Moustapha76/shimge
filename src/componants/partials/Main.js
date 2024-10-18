@@ -10,7 +10,7 @@ import AOS from 'aos';
 import { Image } from 'antd';
 
   export default function Main(){
-    const { products, cityproperties, partenaires } = useContext(GlobalContext);
+    const { cityproperties, partenaires } = useContext(GlobalContext);
     useEffect(() => {
         AOS.init({
           duration: 1000, // Durée de l'animation en millisecondes
@@ -36,8 +36,6 @@ import { Image } from 'antd';
                         <Image src="../images/toilet-5.jpg" alt="" />
                         <Image src="../images/toilet-1.jpg" alt="" />
                     </Image.PreviewGroup>
-                    {/* <img src="../images/about-banner-1.jpg" alt="" />
-                    <img src="../images/house-3.jpg" alt="" /> */}
                 </div>
             </section>
             <section className='advantages'>

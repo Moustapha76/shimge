@@ -1,6 +1,6 @@
-import Header from '../componants/partials/Header';
+import Header from '../componants/partials/Header.js';
 import Blog from '../componants/Blog.js';
-import Footer from '../componants/partials/Footer';
+import Footer from '../componants/partials/Footer.js';
 import { useEffect } from "react";
 
 export default function Actualites() {
